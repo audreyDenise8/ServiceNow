@@ -1,0 +1,7 @@
+var gr = GlideRecord('svc_ci_assoc');
+gr.addQuery('ci_id', '2dbb2ef2db8976806b60f9571d96199b');
+gr.query();
+
+if (gr.next() && gr.getRowCount()==1) {
+  gs.info(gr.service_id.support_group.getDisplayValue());
+}
