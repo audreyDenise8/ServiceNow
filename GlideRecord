@@ -5,3 +5,12 @@ gr.query();
 if (gr.next() && gr.getRowCount()==1) {
   gs.info(gr.service_id.support_group.getDisplayValue());
 }
+
+=======================
+
+var gr = GlideRecord('cmdb_ci_service');
+gr.get('0216185ddb38d814eb1634f6689619e2');
+
+if (gr.u_primary_maintenance) {
+  gs.info(gr.u_primary_maintenance);
+}
